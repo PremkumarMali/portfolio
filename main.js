@@ -154,9 +154,8 @@ if (d.formspreeId) {
     location.href = `mailto:${d.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
-$("#contact-intro").textContent = form.hidden
-  ? "The quickest way to reach me is LinkedIn. I'm happy to talk about roles, internships and projects."
-  : "Have a role, internship or project in mind? Send me a message and I'll get back to you.";
+$("#contact-intro").textContent = "The quickest way to reach me is LinkedIn. I'm happy to talk about roles, internships and projects.";
+$("#contact-intro").hidden = !form.hidden;
 $("#contact-socials").innerHTML = socials();
 
 // Footer
